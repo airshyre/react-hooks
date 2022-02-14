@@ -5,10 +5,12 @@ export const useStickyState = <T>(
   fallbackState: T,
 ): [T, (newState: T) => void] => {
   const localStorageKey = `stickyState-${key}`;
-  const [state, _setState] = React.useState<T>(localStorage.getItem(localStorageKey) ?? fallbackState);
+  const [state, _setState] = React.useState<T>(
+    JSON.parse(localStorage.getItem(localStorageKey) ?? "") ?? fallbackState,
+  );
   const setState = React.useCallback(
     (newState: T) => {
-      saveToLocalStorage(localStorageKey, newState);
+      localStorage.setItem(localStorageKey, JSON.stringify(newState));
       _setState(newState);
     },
     [localStorageKey],
