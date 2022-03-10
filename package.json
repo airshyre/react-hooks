@@ -1,0 +1,27 @@
+{
+  "name": "react-hooks",
+  "version": "1.0.0",
+  "description": "A collection of useful react hooks.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "npx jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/airshyre/react-hooks.git"
+  },
+  "author": "airshyre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/airshyre/react-hooks/issues"
+  },
+  "homepage": "https://github.com/airshyre/react-hooks#readme",
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "@types/react": "^17.0.40",
+    "jest": "^27.5.1",
+    "react": "^17.0.2",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.6.2"
+  }
+}
